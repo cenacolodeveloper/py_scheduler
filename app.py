@@ -1,9 +1,10 @@
-import random
-
+# import random
 from itertools import combinations
+import pandas
 
 
-
+res = pandas.read_excel("house_list.xlsx")
+print(res)
 
 def rSubset(arr, r):
     c = list(combinations(arr, r))
@@ -12,7 +13,12 @@ def rSubset(arr, r):
 
 arr = ["James", "Mike M", "Eric", "Ben", "Roberto", "Mike F", "Chris", "Justin", "Cody", "Noah", "Joel", "Anthony"]
 r = 2
-print(rSubset(arr, r))
+
+# print(rSubset(arr, r))
+
+
+
+
 
  
 # pairs = []
