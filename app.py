@@ -3,14 +3,11 @@ import pandas
 
 EXCEL_FILE = "house_list.xlsx"
 
-res = pandas.read_excel(EXCEL_FILE)
-
-
 def arr_to_str(arr):
     return arr[0]
 
+res = pandas.read_excel(EXCEL_FILE)
 cleaned_excel_list = list(map(arr_to_str, res.values))
-
 
 if len(cleaned_excel_list) % 2 != 0:
    raise Exception("House List must have even number of brothers")
@@ -22,15 +19,12 @@ def write_data_to_excel():
     # Write to Excel file
     df.to_excel("output.xlsx")
 
-
 def rSubset(arr):
     c = list(combinations(arr, 2))
     print(len(c))
     return list(combinations(arr, 2))
 
-
 # write_data_to_excel()
-
 house_list_tuples = rSubset(cleaned_excel_list)
 print(house_list_tuples)
 
