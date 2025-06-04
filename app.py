@@ -4,7 +4,19 @@ import pandas
 
 
 res = pandas.read_excel("house_list.xlsx")
-print(res)
+print(res.values)
+
+def arr_to_str(arr):
+    return arr[0]
+
+cleaned_excel_list = list(map(arr_to_str, res.values))
+
+
+if len(cleaned_excel_list) % 2 != 0:
+   raise Exception("House List must have even number of brothers")
+    
+
+
 
 def rSubset(arr, r):
     c = list(combinations(arr, r))
