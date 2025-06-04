@@ -2,9 +2,10 @@
 from itertools import combinations
 import pandas
 
+EXCEL_FILE = "house_list.xlsx"
 
-res = pandas.read_excel("house_list.xlsx")
-print(res.values)
+res = pandas.read_excel(EXCEL_FILE)
+
 
 def arr_to_str(arr):
     return arr[0]
@@ -15,23 +16,33 @@ cleaned_excel_list = list(map(arr_to_str, res.values))
 if len(cleaned_excel_list) % 2 != 0:
    raise Exception("House List must have even number of brothers")
     
+def write_data_to_excel():
+    data = {'col1': [1, 2], 'col2': [3, 4]}
+    df = pandas.DataFrame(data)
+
+    # Write to Excel file
+    df.to_excel("output.xlsx")
 
 
-
-def rSubset(arr, r):
-    c = list(combinations(arr, r))
+def rSubset(arr):
+    c = list(combinations(arr, 2))
     print(len(c))
-    return list(combinations(arr, r))
+    return list(combinations(arr, 2))
 
-arr = ["James", "Mike M", "Eric", "Ben", "Roberto", "Mike F", "Chris", "Justin", "Cody", "Noah", "Joel", "Anthony"]
-r = 2
 
-# print(rSubset(arr, r))
-
+# write_data_to_excel()
+print(rSubset(cleaned_excel_list))
 
 
 
 
+
+
+
+
+
+
+# arr = ["James", "Mike M", "Eric", "Ben", "Roberto", "Mike F", "Chris", "Justin", "Cody", "Noah", "Joel", "Anthony"]
  
 # pairs = []
 
