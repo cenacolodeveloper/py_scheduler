@@ -28,6 +28,11 @@ def rSubset(arr):
 house_list_tuples = rSubset(cleaned_excel_list)
 print(house_list_tuples)
 
+
+
+
+
+
 #       SAMPLE OUTPUT
 
 #       [('James', 'Mike M'), ('James', 'Anthony'), ('James', 'Ben'), ('James', 'Roberto'), ('James', 'Eric '), 
