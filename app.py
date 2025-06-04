@@ -1,36 +1,44 @@
 import random
 
-
-# list of the house and 
-pairs = []
-
-house_list = ["James", "Mike M", "Eric", "Ben", "Roberto", "Mike F", "Chris", "Justin", "Cody", "Noah", "Joel", "Anthony"]
+from itertools import combinations
 
 
-def create_random_pair(li):
-    tmp_list = []
+
+
+def rSubset(arr, r):
+    c = list(combinations(arr, r))
+    print(len(c))
+    return list(combinations(arr, r))
+
+arr = ["James", "Mike M", "Eric", "Ben", "Roberto", "Mike F", "Chris", "Justin", "Cody", "Noah", "Joel", "Anthony"]
+r = 2
+print(rSubset(arr, r))
+
+ 
+# pairs = []
+
+# house_list = ["James", "Mike M", "Eric", "Ben", "Roberto", "Mike F", "Chris", "Justin", "Cody", "Noah", "Joel", "Anthony"]
+
+
+# def create_random_pair(li):
+#     tmp_list = []
     
-    name1 = random.choice(li)
-    tmp_list.append(name1)
-    name2 = random.choice(li)
-    tmp_list.append(name2)
+#     name1 = random.choice(li)
+#     tmp_list.append(name1)
+#     name2 = random.choice(li)
+#     tmp_list.append(name2)
 
-    while name1 == name2:
-        name2 = random.choice(li)
-        tmp_list[1] = name2
+#     while name1 == name2:
+#         name2 = random.choice(li)
+#         tmp_list[1] = name2
     
-    print(tmp_list)
-    return tmp_list    
+#     return tmp_list    
 
-# does_exist = False 
+# def get_combinations(l):
+#     house_list_length = len(l)
+# def create_pairs():
+#     p = create_random_pair(house_list)
+#     pairs.append(p)
+#     print(pairs)
 
-# counter = 0
-# while does_exist == False:
-#     counter =+ 1
-#     pair_list = [create_random_pair(), create_random_pair()]
-#     if pair_list[0] != pair_list[1]:
-#         pairs.append(pair_list)
-    
-#     does_exist = True
-
-create_random_pair(house_list)
+# create_pairs()
