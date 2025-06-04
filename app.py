@@ -1,4 +1,3 @@
-# import random
 from itertools import combinations
 import pandas
 
@@ -31,43 +30,25 @@ def rSubset(arr):
 
 
 # write_data_to_excel()
-print(rSubset(cleaned_excel_list))
+
+house_list_tuples = rSubset(cleaned_excel_list)
+print(house_list_tuples)
+
+#       SAMPLE OUTPUT
+
+#       [('James', 'Mike M'), ('James', 'Anthony'), ('James', 'Ben'), ('James', 'Roberto'), ('James', 'Eric '), 
+#       ('James', 'Mike F'), ('James', 'Chris'), ('James', 'Joel'), ('James', 'Noah'), ('James', 'Cody'), 
+#       ('James', 'Justin'), ('Mike M', 'Anthony'), ('Mike M', 'Ben'), ('Mike M', 'Roberto'), ('Mike M', 'Eric '),
+#       ('Mike M', 'Mike F'), ('Mike M', 'Chris'), ('Mike M', 'Joel'), ('Mike M', 'Noah'), ('Mike M', 'Cody'),
+#       ('Mike M', 'Justin'), ('Anthony', 'Ben'), ('Anthony', 'Roberto'), ('Anthony', 'Eric '), ('Anthony', 'Mike F'),
+#       ('Anthony', 'Chris'), ('Anthony', 'Joel'), ('Anthony', 'Noah'), ('Anthony', 'Cody'), ('Anthony', 'Justin'),
+#       ('Ben', 'Roberto'), ('Ben', 'Eric '), ('Ben', 'Mike F'), ('Ben', 'Chris'), ('Ben', 'Joel'), ('Ben', 'Noah'),
+#       ('Ben', 'Cody'), ('Ben', 'Justin'), ('Roberto', 'Eric '), ('Roberto', 'Mike F'), ('Roberto', 'Chris'),
+#       ('Roberto', 'Joel'), ('Roberto', 'Noah'), ('Roberto', 'Cody'), ('Roberto', 'Justin'), ('Eric ', 'Mike F'),
+#       ('Eric ', 'Chris'), ('Eric ', 'Joel'), ('Eric ', 'Noah'), ('Eric ', 'Cody'), ('Eric ', 'Justin'),
+#       ('Mike F', 'Chris'), ('Mike F', 'Joel'), ('Mike F', 'Noah'), ('Mike F', 'Cody'), ('Mike F', 'Justin'),
+#       ('Chris', 'Joel'), ('Chris', 'Noah'), ('Chris', 'Cody'), ('Chris', 'Justin'), ('Joel', 'Noah'),
+#       ('Joel', 'Cody'), ('Joel', 'Justin'), ('Noah', 'Cody'), ('Noah', 'Justin'), ('Cody', 'Justin')]
 
 
-
-
-
-
-
-
-
-
-# arr = ["James", "Mike M", "Eric", "Ben", "Roberto", "Mike F", "Chris", "Justin", "Cody", "Noah", "Joel", "Anthony"]
- 
-# pairs = []
-
-# house_list = ["James", "Mike M", "Eric", "Ben", "Roberto", "Mike F", "Chris", "Justin", "Cody", "Noah", "Joel", "Anthony"]
-
-
-# def create_random_pair(li):
-#     tmp_list = []
-    
-#     name1 = random.choice(li)
-#     tmp_list.append(name1)
-#     name2 = random.choice(li)
-#     tmp_list.append(name2)
-
-#     while name1 == name2:
-#         name2 = random.choice(li)
-#         tmp_list[1] = name2
-    
-#     return tmp_list    
-
-# def get_combinations(l):
-#     house_list_length = len(l)
-# def create_pairs():
-#     p = create_random_pair(house_list)
-#     pairs.append(p)
-#     print(pairs)
-
-# create_pairs()
+# house_list_current = ["James", "Mike M", "Eric", "Ben", "Roberto", "Mike F", "Chris", "Justin", "Cody", "Noah", "Joel", "Anthony"]
