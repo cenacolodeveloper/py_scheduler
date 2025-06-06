@@ -2,6 +2,7 @@ from itertools import combinations
 import pandas
 
 EXCEL_FILE = "house_list.xlsx"
+number_of_combos = 0
 
 def arr_to_str(arr):
     return arr[0]
@@ -21,12 +22,18 @@ def write_data_to_excel():
 
 def rSubset(arr):
     c = list(combinations(arr, 2))
-    print(len(c))
-    return list(combinations(arr, 2))
+    global number_of_combos
+    number_of_combos = len(c)
+    return c
+
 
 # write_data_to_excel()
 house_list_tuples = rSubset(cleaned_excel_list)
 print(house_list_tuples)
+
+number_of_schedulingPairs_per_session = number_of_combos/(len(cleaned_excel_list) - 1)
+
+print(number_of_schedulingPairs_per_session)
 
 
 
