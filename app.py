@@ -1,5 +1,6 @@
 from itertools import combinations
 import pandas
+import random
 
 EXCEL_FILE = "house_list.xlsx"
 number_of_combos = 0
@@ -26,16 +27,32 @@ def rSubset(arr):
     number_of_combos = len(c)
     return c
 
+def getRandomTuple(hs_list):
+    return random.choice(hs_list)
+    
+
+
+def fill_scheduling_session(hs_list, num_pairs):
+    tmp_session = []
+    while len(tmp_session) < num_pairs:
+        r = getRandomTuple(hs_list)
+
+        # for x in range(0, len(tmp_session)):
+        #     if tmp_session[x]
+        
+        if len(tmp_session) == 0:
+            tmp_session.append(r)
+      
+    print(tmp_session)
 
 # write_data_to_excel()
 house_list_tuples = rSubset(cleaned_excel_list)
-print(house_list_tuples)
+# print(house_list_tuples)
 
 number_of_schedulingPairs_per_session = number_of_combos/(len(cleaned_excel_list) - 1)
 
-print(number_of_schedulingPairs_per_session)
 
-
+fill_scheduling_session(house_list_tuples, number_of_schedulingPairs_per_session)
 
 
 
