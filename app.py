@@ -40,11 +40,20 @@ def fill_scheduling_session(hs_list, num_pairs):
         if len(tmp_session) == 0:
             tmp_session.append(r)
             continue
+
+        bo = False
         for x in range(0, len(tmp_session)):
-            if(r[0] == tmp_session[x][0] or r[0] == tmp_session[x][1] or r[1] == tmp_session[x][0] or r[1] == tmp_session[x][1]):
-                continue
+            a = tmp_session[x][0]
+            b = tmp_session[x][1]
+
+            if(r[0] == a or r[0] == b or r[1] == a or r[1] == b):
+                bo = True
+                break
             else:
-                tmp_session.append(r)
+                continue
+        if bo == False:
+            tmp_session.append(r)
+  
         # for x in range(0, len(tmp_session)):
         #     if tmp_session[x]
         
@@ -52,6 +61,7 @@ def fill_scheduling_session(hs_list, num_pairs):
         #     tmp_session.append(r)
       
     print(tmp_session)
+    return tmp_session
 
 # write_data_to_excel()
 house_list_tuples = rSubset(cleaned_excel_list)
