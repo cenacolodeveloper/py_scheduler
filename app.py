@@ -37,11 +37,19 @@ def fill_scheduling_session(hs_list, num_pairs):
     while len(tmp_session) < num_pairs:
         r = getRandomTuple(hs_list)
 
+        if len(tmp_session) == 0:
+            tmp_session.append(r)
+            continue
+        for x in range(0, len(tmp_session)):
+            if(r[0] == tmp_session[x][0] or r[0] == tmp_session[x][1] or r[1] == tmp_session[x][0] or r[1] == tmp_session[x][1]):
+                continue
+            else:
+                tmp_session.append(r)
         # for x in range(0, len(tmp_session)):
         #     if tmp_session[x]
         
-        if len(tmp_session) == 0:
-            tmp_session.append(r)
+        # if len(tmp_session) == 0:
+        #     tmp_session.append(r)
       
     print(tmp_session)
 
